@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2026-02-11 15:18:51.334647",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_tab",
+  "section_break_g3op",
+  "article",
+  "designation",
+  "is_referenced",
+  "section_break_tnxe",
+  "serial_no",
+  "batch_no",
+  "quantity",
+  "place_table",
+  "events"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_g3op",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "article",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Article",
+   "options": "Article"
+  },
+  {
+   "default": "0",
+   "fetch_from": "article.is_referenced",
+   "fieldname": "is_referenced",
+   "fieldtype": "Check",
+   "label": "Is Referenced",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:!doc.batch_no;",
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No"
+  },
+  {
+   "depends_on": "eval:!doc.serial_no;",
+   "fieldname": "batch_no",
+   "fieldtype": "Data",
+   "label": "Batch No"
+  },
+  {
+   "default": "1",
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_referenced==1;",
+   "fieldname": "events",
+   "fieldtype": "Table",
+   "label": "Events",
+   "options": "Ref Events"
+  },
+  {
+   "fieldname": "general_tab",
+   "fieldtype": "Tab Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "section_break_tnxe",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fetch_from": "article.shortname",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Designation"
+  },
+  {
+   "fieldname": "place_table",
+   "fieldtype": "Table",
+   "label": "Place(s)",
+   "options": "Places Stock"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-20 16:18:58.393854",
+ "modified_by": "Administrator",
+ "module": "Glao App",
+ "name": "Stock",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "designation, quantity",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

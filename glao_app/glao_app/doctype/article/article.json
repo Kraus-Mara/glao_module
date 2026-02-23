@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2026-02-04 14:46:49.064306",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_eo9g",
+  "article_name",
+  "shortname",
+  "old_code",
+  "group",
+  "is_active",
+  "is_referenced",
+  "description_tab",
+  "chars",
+  "tab_break_dcvv",
+  "providers",
+  "alternatives_tab",
+  "table_fucy",
+  "assembly_tab",
+  "is_assembly",
+  "items",
+  "stock_rules_tab",
+  "rules",
+  "tabnotes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_eo9g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "article_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "group",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Group",
+   "options": "Articles Group",
+   "reqd": 1
+  },
+  {
+   "fieldname": "providers",
+   "fieldtype": "Table",
+   "label": "Providers",
+   "options": "Article Providers"
+  },
+  {
+   "fieldname": "description_tab",
+   "fieldtype": "Tab Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "tab_break_dcvv",
+   "fieldtype": "Tab Break",
+   "label": "Providers"
+  },
+  {
+   "fieldname": "tabnotes",
+   "fieldtype": "Tab Break",
+   "label": "Notes"
+  },
+  {
+   "description": "Per Unit Mass (kg)",
+   "fieldname": "chars",
+   "fieldtype": "Table",
+   "label": "Characteristics",
+   "non_negative": 1,
+   "not_nullable": 1,
+   "options": "Characteristics"
+  },
+  {
+   "fieldname": "shortname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Shortname"
+  },
+  {
+   "fieldname": "alternatives_tab",
+   "fieldtype": "Tab Break",
+   "label": "Alternatives"
+  },
+  {
+   "fieldname": "table_fucy",
+   "fieldtype": "Table",
+   "options": "Alternatives"
+  },
+  {
+   "fieldname": "assembly_tab",
+   "fieldtype": "Tab Break",
+   "label": "Assembly"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_assembly",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Is Assembly"
+  },
+  {
+   "depends_on": "eval:doc.is_assembly==1;",
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Assembly Items"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_referenced",
+   "fieldtype": "Check",
+   "label": "Is Referenced",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "old_code",
+   "fieldtype": "Data",
+   "label": "Old code"
+  },
+  {
+   "fieldname": "stock_rules_tab",
+   "fieldtype": "Tab Break",
+   "label": "Stock Rules"
+  },
+  {
+   "fieldname": "rules",
+   "fieldtype": "Link",
+   "label": "Rules",
+   "options": "Places Rules Main"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-20 13:01:46.524467",
+ "modified_by": "Administrator",
+ "module": "Glao App",
+ "name": "Article",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "search_fields": "shortname",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

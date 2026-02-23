@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-11 14:19:37.257657",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xelt",
+  "type",
+  "article",
+  "article_from_stock",
+  "article_name",
+  "serial",
+  "is_referenced",
+  "second",
+  "placetostock",
+  "total_quantity",
+  "quantity_to_manipulate",
+  "target_place",
+  "source_place",
+  "reference_details",
+  "movement_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xelt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Add\nPull\nTransfert"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Add\";",
+   "fieldname": "article",
+   "fieldtype": "Link",
+   "label": "Article",
+   "options": "Article"
+  },
+  {
+   "default": "0",
+   "fetch_from": "article.is_referenced",
+   "fieldname": "is_referenced",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Referenced"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Transfert\" || (doc.type==\"Add\" && doc.is_referenced==1);",
+   "fieldname": "target_place",
+   "fieldtype": "Link",
+   "label": "Target place",
+   "options": "Places"
+  },
+  {
+   "depends_on": "eval:doc.type==\"Transfert\" || (doc.type==\"Pull\" && doc.second==0);",
+   "fieldname": "source_place",
+   "fieldtype": "Autocomplete",
+   "label": "Source place"
+  },
+  {
+   "depends_on": "eval:doc.is_referenced==1 && doc.type!=\"Pull\";",
+   "fieldname": "reference_details",
+   "fieldtype": "Table",
+   "label": "Reference details",
+   "options": "Reference Details"
+  },
+  {
+   "default": "Now",
+   "fieldname": "movement_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Movement Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Movement",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.type!=\"Add\";",
+   "fieldname": "article_from_stock",
+   "fieldtype": "Link",
+   "label": "Article",
+   "options": "Stock"
+  },
+  {
+   "depends_on": "eval:doc.is_referenced==0 && doc.type==\"Add\";",
+   "fieldname": "placetostock",
+   "fieldtype": "Table",
+   "label": "Place(s)",
+   "options": "Places Stock"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.is_referenced==0;\n",
+   "fieldname": "total_quantity",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Quantity"
+  },
+  {
+   "default": "0",
+   "fetch_from": "article_from_stock.is_referenced",
+   "fieldname": "second",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "second"
+  },
+  {
+   "depends_on": "eval:doc.article_from_stock && doc.second==0;",
+   "fieldname": "quantity_to_manipulate",
+   "fieldtype": "Int",
+   "label": "Quantity to manipulate"
+  },
+  {
+   "fetch_from": "article_from_stock.article",
+   "fieldname": "article_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "article_name"
+  },
+  {
+   "fetch_from": "article_from_stock.serial_no",
+   "fieldname": "serial",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "serial"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-20 13:28:08.784607",
+ "modified_by": "Administrator",
+ "module": "Glao App",
+ "name": "Movement",
+ "naming_rule": "By script",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-02-11 14:46:20.236954",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_kp48",
+  "article",
+  "quantity",
+  "is_referenced"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_kp48",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "article",
+   "fieldtype": "Link",
+   "label": "Article",
+   "options": "Article"
+  },
+  {
+   "default": "1",
+   "depends_on": "eval:doc.is_referenced==0;",
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "fetch_from": "article.is_referenced",
+   "fieldname": "is_referenced",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Is Referenced"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-02-11 14:52:10.539072",
+ "modified_by": "Administrator",
+ "module": "Glao App",
+ "name": "Movement Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

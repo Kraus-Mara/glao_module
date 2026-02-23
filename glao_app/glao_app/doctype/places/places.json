@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:place_name",
+ "creation": "2026-02-04 10:47:46.085185",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_tab",
+  "section_break_arbr",
+  "place_id",
+  "place_name",
+  "parent_places",
+  "is_group",
+  "extern",
+  "company",
+  "location",
+  "is_active",
+  "rules_tab",
+  "rules_section",
+  "place_rules",
+  "owner_id",
+  "lft",
+  "rgt",
+  "old_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_arbr",
+   "fieldtype": "Section Break",
+   "label": "General details"
+  },
+  {
+   "fieldname": "owner_id",
+   "fieldtype": "Link",
+   "label": "Owner",
+   "options": "User"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "place_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Place Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "place_rules",
+   "fieldtype": "Table",
+   "label": "Place Rules",
+   "options": "Places Stock Rules",
+   "placeholder": "Add a stock rule"
+  },
+  {
+   "fieldname": "place_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Place ID",
+   "not_nullable": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Old Parent",
+   "options": "Places"
+  },
+  {
+   "fieldname": "parent_places",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Parent Places",
+   "link_filters": "[[\"Places\",\"is_group\",\"=\",1]]",
+   "options": "Places",
+   "set_only_once": 1
+  },
+  {
+   "depends_on": "extern",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "mandatory_depends_on": "extern",
+   "options": "Company"
+  },
+  {
+   "fetch_from": "company.location",
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "mandatory_depends_on": "extern"
+  },
+  {
+   "fieldname": "general_tab",
+   "fieldtype": "Tab Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "rules_tab",
+   "fieldtype": "Tab Break",
+   "label": "Rules"
+  },
+  {
+   "fieldname": "rules_section",
+   "fieldtype": "Section Break",
+   "label": "Rules"
+  },
+  {
+   "default": "0",
+   "fieldname": "extern",
+   "fieldtype": "Check",
+   "label": "Extern"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_tree": 1,
+ "links": [],
+ "modified": "2026-02-13 15:07:18.295670",
+ "modified_by": "Administrator",
+ "module": "Glao App",
+ "name": "Places",
+ "naming_rule": "By fieldname",
+ "nsm_parent_field": "parent_places",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "place_id",
+ "track_changes": 1
+}

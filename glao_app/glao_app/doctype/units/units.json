@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:unit_name",
+ "creation": "2026-02-09 11:55:27.426645",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_gzuh",
+  "unit_name",
+  "not_si",
+  "to",
+  "conversion_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_gzuh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "not_si",
+   "fieldname": "to",
+   "fieldtype": "Link",
+   "label": "To",
+   "options": "Units"
+  },
+  {
+   "default": "0",
+   "fieldname": "not_si",
+   "fieldtype": "Check",
+   "label": "Not SI"
+  },
+  {
+   "fieldname": "unit_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "depends_on": "not_si",
+   "fieldname": "conversion_rate",
+   "fieldtype": "Data",
+   "label": "Conversion Rate"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-23 10:58:10.231613",
+ "modified_by": "Administrator",
+ "module": "Glao App",
+ "name": "Units",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
