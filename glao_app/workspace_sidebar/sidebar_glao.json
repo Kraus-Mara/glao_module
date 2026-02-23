@@ -1,0 +1,101 @@
+{
+ "app": "glao_app",
+ "creation": "2026-02-23 14:30:53.853264",
+ "docstatus": 0,
+ "doctype": "Workspace Sidebar",
+ "header_icon": "monitor-dot",
+ "idx": 0,
+ "items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "home",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Home",
+   "link_to": "home",
+   "link_type": "Page",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "book-marked",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Articles",
+   "link_to": "Article",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "group",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Groups",
+   "link_to": "Articles Group",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "warehouse",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Places",
+   "link_to": "Places",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "building",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Companies",
+   "link_to": "Company",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "grid-2x2-plus",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Movements",
+   "link_to": "Movement",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "package-search",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Stock",
+   "link_to": "Stock",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-02-23 14:48:31.252907",
+ "modified_by": "Administrator",
+ "module": "Glao App",
+ "name": "SideBar GLAO",
+ "owner": "Administrator",
+ "standard": 1,
+ "title": "SideBar GLAO"
+}
