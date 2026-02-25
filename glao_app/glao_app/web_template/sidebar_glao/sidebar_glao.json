@@ -1,0 +1,36 @@
+{
+ "__islocal": true,
+ "__unsaved": 1,
+ "creation": "2026-02-25 11:49:38.963730",
+ "docstatus": 0,
+ "doctype": "Web Template",
+ "fields": [
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "articles",
+   "fieldtype": "Link",
+   "label": "Articles",
+   "options": "Article",
+   "reqd": 0
+  },
+  {
+   "__islocal": 1,
+   "__unsaved": 1,
+   "fieldname": "groups",
+   "fieldtype": "Link",
+   "label": "Groups",
+   "options": "Articles Group",
+   "reqd": 0
+  }
+ ],
+ "idx": 0,
+ "modified": "2026-02-25 11:49:38.963730",
+ "modified_by": "Administrator",
+ "module": "Glao App",
+ "name": "sidebar glao",
+ "owner": "Administrator",
+ "standard": 1,
+ "template": "",
+ "type": "Component"
+}

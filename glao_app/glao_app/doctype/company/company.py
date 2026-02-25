@@ -12,8 +12,8 @@ class Company(Document):
     from typing import TYPE_CHECKING
 
     if TYPE_CHECKING:
-        from glao_app.glao_app.doctype.contacts.contacts import Contacts
         from frappe.types import DF
+        from glao_app.glao_app.doctype.contacts.contacts import Contacts
 
         company_name: DF.Data | None
         company_type: DF.Literal["Client", "Provider"]

@@ -12,10 +12,8 @@ class Nomenclature(Document):
     from typing import TYPE_CHECKING
 
     if TYPE_CHECKING:
-        from glao_app.glao_app.doctype.nomenclature_items.nomenclature_items import (
-            NomenclatureItems,
-        )
         from frappe.types import DF
+        from glao_app.glao_app.doctype.nomenclature_items.nomenclature_items import NomenclatureItems
 
         is_active: DF.Check
         items: DF.Table[NomenclatureItems]

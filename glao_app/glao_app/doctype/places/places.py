@@ -12,10 +12,8 @@ class Places(Document):
     from typing import TYPE_CHECKING
 
     if TYPE_CHECKING:
-        from glao_app.glao_app.doctype.places_stock_rules.places_stock_rules import (
-            PlacesStockRules,
-        )
         from frappe.types import DF
+        from glao_app.glao_app.doctype.places_stock_rules.places_stock_rules import PlacesStockRules
 
         company: DF.Link | None
         extern: DF.Check

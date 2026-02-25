@@ -14,9 +14,9 @@ class Stock(Document):
     from typing import TYPE_CHECKING
 
     if TYPE_CHECKING:
+        from frappe.types import DF
         from glao_app.glao_app.doctype.places_stock.places_stock import PlacesStock
         from glao_app.glao_app.doctype.ref_events.ref_events import RefEvents
-        from frappe.types import DF
 
         article: DF.Link | None
         batch_no: DF.Data | None

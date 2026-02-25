@@ -20,11 +20,9 @@ class Movement(Document):
     from typing import TYPE_CHECKING
 
     if TYPE_CHECKING:
-        from glao_app.glao_app.doctype.places_stock.places_stock import PlacesStock
-        from glao_app.glao_app.doctype.reference_details.reference_details import (
-            ReferenceDetails,
-        )
         from frappe.types import DF
+        from glao_app.glao_app.doctype.places_stock.places_stock import PlacesStock
+        from glao_app.glao_app.doctype.reference_details.reference_details import ReferenceDetails
 
         amended_from: DF.Link | None
         article: DF.Link | None

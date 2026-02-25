@@ -46,7 +46,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-23 10:58:10.231613",
+ "modified": "2026-02-25 10:53:43.923676",
  "modified_by": "Administrator",
  "module": "Glao App",
  "name": "Units",
@@ -61,7 +61,7 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "GLAO User",
    "share": 1,
    "write": 1
   }

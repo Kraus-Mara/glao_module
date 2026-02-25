@@ -13,17 +13,11 @@ class Article(Document):
     from typing import TYPE_CHECKING
 
     if TYPE_CHECKING:
-        from glao_app.glao_app.doctype.alternatives.alternatives import Alternatives
-        from glao_app.glao_app.doctype.article_providers.article_providers import (
-            ArticleProviders,
-        )
-        from glao_app.glao_app.doctype.assembly_items.assembly_items import (
-            AssemblyItems,
-        )
-        from glao_app.glao_app.doctype.characteristics.characteristics import (
-            Characteristics,
-        )
         from frappe.types import DF
+        from glao_app.glao_app.doctype.alternatives.alternatives import Alternatives
+        from glao_app.glao_app.doctype.article_providers.article_providers import ArticleProviders
+        from glao_app.glao_app.doctype.assembly_items.assembly_items import AssemblyItems
+        from glao_app.glao_app.doctype.characteristics.characteristics import Characteristics
 
         article_name: DF.Data
         chars: DF.Table[Characteristics]
